@@ -2,4 +2,4 @@
 
 ## Ipad Mini
 
-[Ipad Mini](/Ipad Mini)
+[Ipad Mini](/Animate/Ipad Mini/index.html)
