@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apple Website iPad Mini Animate</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="sticky">
+        <div class="content">
+          <section>
+            <h2 class="title-1">
+              <strong class="headline-gradient">The magic of iPad.</strong>
+              <span>In the palm of your hand.</span>
+            </h2>
+          </section>
+          <section>
+            <h2 class="title-2">
+              Where <strong>big ideas</strong>
+              <br />
+              come to life.
+            </h2>
+          </section>
+          <section>
+            <h2 class="title-3">
+              With <strong>power</strong>
+              <br />
+              that packs a punch.
+            </h2>
+          </section>
+        </div>
+        <div class="media-wrapper">
+          <canvas width="1600" height="1176" id="canvas"></canvas>
+        </div>
+      </div>
+      <div class="timeline-wrapper">
+        <div class="timeline timeline-1"></div>
+        <div class="timeline timeline-2"></div>
+        <div class="timeline timeline-3"></div>
+      </div>
+    </main>
+    <script src="./utils.js"></script>
+    <script>
+      let frames = [];
+      const fps = 30;
+      const url = "/Ipad Mini/";
+      const source = [
+        {
+          url: `${url}large_a.webm`,
+          frameCount: 230,
+        },
+        {
+          url: `${url}large_b.webm`,
+          frameCount: 230,
+        },
+      ];
+
+      // 1. cache video frame
+      showLoading();
+      Promise.all(source.map((item) => cacheFrame(item))).then((values) => {
+        const ctx = document.getElementById("canvas").getContext("2d");
+
+        frames = values.flat();
+        hideLoading();
+        renderFrame(ctx, frames[0]);
+
+        window.addEventListener("scroll", () => {
+          const scrolled =
+            document.documentElement.scrollTop /
+            (document.documentElement.scrollHeight -
+              document.documentElement.clientHeight);
+
+          // 2. get video frame
+          frames = frames.filter((item) => item !== false);
+
+          const frameIndex = parseInt(frames.length * scrolled) + 1;
+
+          // 3. draw video frame
+          if (frames[frameIndex] !== undefined)
+            renderFrame(ctx, frames[frameIndex]);
+
+          // 4. update page scroll
+          document.querySelector(
+            ".content"
+          ).style.transform = `matrix(1, 0, 0, 1, 0, -${document.documentElement.scrollTop})`;
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+<html>
+  <head>
+    <title>Video Scroll experiment</title>
+
+    <style id="jsbin-css">
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 100%;
+      }
+
+      .video-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+
+      .video-container__video {
+        position: fixed;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .content-block {
+        position: relative;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2px;
+        padding: 50px 60px 0;
+        overflow: hidden;
+        background-color: white;
+        z-index: 1;
+        opacity: 0.5;
+      }
+
+      .content-block:first-child {
+        margin-top: 150px;
+      }
+
+      .content-block__title {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+
+      .content-block__text {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="video-container">
+      <video id="video" class="video-container__video">
+        <source
+          src="https://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.webm"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div id="set-height">
+        <div class="main">
+          <div class="content-block">
+            <p class="content-block__text">
+              Applications for September 2017 entry are now closed. Please see
+              the FAQ section for application deadlines.
+            </p>
+
+            <p class="content-block__text">
+              A unique course in the field of theatre and performance practice,
+              this one-year MA course allows students with a strong,
+              demonstrable background in performance to re-examine and broaden
+              their skills in a truly experimental and highly collaborative
+              framework.
+            </p>
+
+            <p class="content-block__text">
+              The emphasis throughout the year is on devised and ensemble work,
+              as you will advance your understanding of performance from a
+              post-Stanislavski standpoint.
+            </p>
+
+            <p class="content-block__text">
+              The course, validated by Kingâ€™s College London, one of the
+              worldâ€™s top 20 universities, explores non-mainstream theatre
+              craft internationally. Read about some of graduates in the
+              downloadable PDF
+            </p>
+          </div>
+
+          <div class="content-block">
+            <p class="content-block__text">
+              The course is built around three strands:
+            </p>
+
+            <p class="content-block__text">
+              Acting and Performance: Practice and Methodology - Working from
+              the foundation of the Stanislavski â€˜systemâ€™, you will be
+              introduced to the approaches and responses of later practitioners,
+              including Brecht, Copeau, Meyerhold, and Grotowski. International
+              historical context is given through exploring the improvisational
+              and physical practice, developments in experimental theatre
+              internationally, new writing, and performance since the early 20th
+              Century. Development of Performance - This dual aspect of the
+              course builds on your strengths and skills, whilst improving areas
+              where you are less experienced. The first strand supports you as
+              you refine and improve your understanding of how to develop as an
+              individual within an ensemble environment. The second covers vocal
+              and physical performance training, supplemented by Commedia,
+              creative writing, improvisation, and singing. Scene Study - Scene
+              study is woven throughout the course and provides a forum for you
+              to develop and experiment with the techniques you are learning.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2 class="content-block__title">Course Details</h2>
+            <p class="content-block__text">
+              Our full time, three-year BA in Acting (conservatoire training)
+              develops a high level of technical facility, flexibility,
+              individuality and imagination. The training provides skills in
+              acting, voice, singing and movement, and students apply these
+              skills in a wide variety of media including theatre, television,
+              film and radio.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2 class="content-block__title">The Program</h2>
+            <p class="content-block__text">
+              The training is classically based because we believe this provides
+              the best foundation for acting in any form or media. However, the
+              training also includes a thorough grounding in contemporary plays
+              and styles as well as classes in camera and microphone technique.
+              Your work will be continuously assessed with extensive individual
+              feedback through regular sessions, written reports, and one-to-one
+              tutorials.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2 class="content-block__title">The Program</h2>
+            <p class="content-block__text">
+              The training is classically based because we believe this provides
+              the best foundation for acting in any form or media. However, the
+              training also includes a thorough grounding in contemporary plays
+              and styles as well as classes in camera and microphone technique.
+              Your work will be continuously assessed with extensive individual
+              feedback through regular sessions, written reports, and one-to-one
+              tutorials.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2 class="content-block__title">The Program</h2>
+            <p class="content-block__text">
+              The training is classically based because we believe this provides
+              the best foundation for acting in any form or media. However, the
+              training also includes a thorough grounding in contemporary plays
+              and styles as well as classes in camera and microphone technique.
+              Your work will be continuously assessed with extensive individual
+              feedback through regular sessions, written reports, and one-to-one
+              tutorials.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2 class="content-block__title">The Program</h2>
+            <p class="content-block__text">
+              The training is classically based because we believe this provides
+              the best foundation for acting in any form or media. However, the
+              training also includes a thorough grounding in contemporary plays
+              and styles as well as classes in camera and microphone technique.
+              Your work will be continuously assessed with extensive individual
+              feedback through regular sessions, written reports, and one-to-one
+              tutorials.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2 class="content-block__title">The Program</h2>
+            <p class="content-block__text">
+              The training is classically based because we believe this provides
+              the best foundation for acting in any form or media. However, the
+              training also includes a thorough grounding in contemporary plays
+              and styles as well as classes in camera and microphone technique.
+              Your work will be continuously assessed with extensive individual
+              feedback through regular sessions, written reports, and one-to-one
+              tutorials.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2 class="content-block__title">The Program</h2>
+            <p class="content-block__text">
+              The training is classically based because we believe this provides
+              the best foundation for acting in any form or media. However, the
+              training also includes a thorough grounding in contemporary plays
+              and styles as well as classes in camera and microphone technique.
+              Your work will be continuously assessed with extensive individual
+              feedback through regular sessions, written reports, and one-to-one
+              tutorials.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2 class="content-block__title">The Program</h2>
+            <p class="content-block__text">
+              The training is classically based because we believe this provides
+              the best foundation for acting in any form or media. However, the
+              training also includes a thorough grounding in contemporary plays
+              and styles as well as classes in camera and microphone technique.
+              Your work will be continuously assessed with extensive individual
+              feedback through regular sessions, written reports, and one-to-one
+              tutorials.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2 class="content-block__title">The Program</h2>
+            <p class="content-block__text">
+              The training is classically based because we believe this provides
+              the best foundation for acting in any form or media. However, the
+              training also includes a thorough grounding in contemporary plays
+              and styles as well as classes in camera and microphone technique.
+              Your work will be continuously assessed with extensive individual
+              feedback through regular sessions, written reports, and one-to-one
+              tutorials.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2 class="content-block__title">The Program</h2>
+            <p class="content-block__text">
+              The training is classically based because we believe this provides
+              the best foundation for acting in any form or media. However, the
+              training also includes a thorough grounding in contemporary plays
+              and styles as well as classes in camera and microphone technique.
+              Your work will be continuously assessed with extensive individual
+              feedback through regular sessions, written reports, and one-to-one
+              tutorials.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2 class="content-block__title">The Program</h2>
+            <p class="content-block__text">
+              The training is classically based because we believe this provides
+              the best foundation for acting in any form or media. However, the
+              training also includes a thorough grounding in contemporary plays
+              and styles as well as classes in camera and microphone technique.
+              Your work will be continuously assessed with extensive individual
+              feedback through regular sessions, written reports, and one-to-one
+              tutorials.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var frameNumber = 0,
+        playbackConst = 500,
+        setHeight = document.getElementById("set-height"),
+        vid = document.getElementById("video");
+
+      vid.addEventListener("loadedmetadata", function () {
+        setHeight.style.height = `${
+          Math.floor(vid.duration) * playbackConst
+        }px`;
+      });
+
+      function scrollPlay() {
+        let frameNumber = window.pageYOffset / playbackConst;
+        vid.currentTime = frameNumber;
+
+        window.requestAnimationFrame(scrollPlay);
+      }
+
+      window.requestAnimationFrame(scrollPlay);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+body {
+  background-color: #f5f5f7;
+  margin: 0;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  color: #1d1d1f;
+  font-size: 48px;
+  line-height: 1.0834933333;
+  font-weight: 600;
+}
+
+strong {
+  color: transparent;
+  text-fill-color: transparent;
+  box-decoration-break: clone;
+}
+
+main {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+  top: 0px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  top: 110vh;
+}
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 980px;
+}
+
+section:nth-child(1),
+.timeline-1 {
+  height: 100vh;
+}
+section:nth-child(2),
+.timeline-2 {
+  height: 90vh;
+}
+section:nth-child(3),
+.timeline-3 {
+  height: 270vh;
+}
+
+section .title-1 {
+  width: 470px;
+}
+section .title-1 strong {
+  background: linear-gradient(
+    90deg,
+    rgb(112, 43, 252) 0%,
+    rgb(242, 59, 255) 100%,
+    rgb(255, 112, 118) 200%,
+    rgb(29, 29, 31) 300%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+section .title-1 span {
+  display: inline-block;
+  width: 320px;
+}
+
+section .title-2 strong {
+  background-image: linear-gradient(
+    90deg,
+    rgb(237, 24, 106) 0%,
+    rgb(255, 103, 0) 100%,
+    rgb(255, 203, 57) 200%,
+    rgb(29, 29, 31) 300%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+section .title-3 strong {
+  background-image: linear-gradient(
+    90deg,
+    rgb(0, 158, 119) 0%,
+    rgb(0, 153, 192) 100%,
+    rgb(2, 127, 255) 200%,
+    rgb(88, 86, 214) 300%,
+    rgb(29, 29, 31) 400%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.media-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 50%;
+  left: 50%;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.media-wrapper canvas {
+  display: block;
+  position: absolute;
+  width: auto;
+  height: auto;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-23%);
+  max-height: 100vh;
+}
+
+.timeline-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-top: -100vh;
+}
+
+.loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 50vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 50vh;
+}
