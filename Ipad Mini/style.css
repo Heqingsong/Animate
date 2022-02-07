@@ -73,7 +73,6 @@ section .title-1 span {
   display: inline-block;
   width: 320px;
 }
-
 section .title-2 strong {
   background-image: linear-gradient(
     90deg,
@@ -85,7 +84,6 @@ section .title-2 strong {
   background-clip: text;
   -webkit-background-clip: text;
 }
-
 section .title-3 strong {
   background-image: linear-gradient(
     90deg,
