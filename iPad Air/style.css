@@ -1,0 +1,92 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 900vh;
+}
+
+.wrapper {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pages {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.wrapper .pages:nth-child(1) {
+  z-index: 1;
+}
+
+.wrapper .pages:nth-child(2) {
+  z-index: 2;
+}
+
+.wrapper .pages:nth-child(3) {
+  z-index: 3;
+}
+
+.wrapper .pages:nth-child(4) {
+  z-index: 4;
+}
+
+.wrapper .pages:nth-child(5) {
+  z-index: 5;
+}
+
+.wrapper .pages:nth-child(2),
+.wrapper .pages:nth-child(3),
+.wrapper .pages:nth-child(4),
+.wrapper .pages:nth-child(5) {
+  clip-path: inset(100% 0px 0px 0px);
+}
+
+.product {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product img {
+  max-height: 90%;
+}
+
+.product h1 {
+  position: absolute;
+  left: 65vw;
+  top: 40vh;
+
+  font-size: 56px;
+  line-height: 1.07143;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+.item-1 {
+  background-color: #e3e4e5;
+  color: #757576;
+}
+.item-2 {
+  background-color: #7e7f83;
+  color: #dedede;
+}
+.item-3 {
+  background-color: #f8d3cc;
+  color: #b0304e;
+}
+.item-4 {
+  background-color: #d2e4ce;
+  color: #04756e;
+}
+.item-5 {
+  background-color: #cad9e5;
+  color: #142864;
+}

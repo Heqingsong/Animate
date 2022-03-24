@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>apple air</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="pages">
+        <div class="product item-1">
+          <img src="./images/1.jpeg" alt="product" />
+          <h1>Silver</h1>
+        </div>
+      </div>
+      <div class="pages">
+        <div class="product item-2">
+          <img src="./images/2.jpeg" alt="product" />
+          <h1>
+            Space <br />
+            Gray
+          </h1>
+        </div>
+      </div>
+      <div class="pages">
+        <div class="product item-3">
+          <img src="./images/3.jpeg" alt="product" />
+          <h1>Rose Gold</h1>
+        </div>
+      </div>
+      <div class="pages">
+        <div class="product item-4">
+          <img src="./images/4.jpeg" alt="product" />
+          <h1>Green</h1>
+        </div>
+      </div>
+      <div class="pages">
+        <div class="product item-5">
+          <img src="./images/5.png" alt="product" />
+          <h1>
+            and <br />
+            Sky Blue
+          </h1>
+        </div>
+      </div>
+    </div>
+    <script>
+      const $ = (rule) => document.querySelector(rule);
+      const page2 = $(".pages:nth-child(2)");
+      const page3 = $(".pages:nth-child(3)");
+      const page4 = $(".pages:nth-child(4)");
+      const page5 = $(".pages:nth-child(5)");
+
+      window.addEventListener("scroll", (e) => {
+        const scrolled =
+          document.documentElement.scrollTop /
+          (document.documentElement.clientHeight * 4);
+
+        page2.style.clipPath = `inset(${
+          ((0.5 - scrolled) / 0.5) * 100
+        }% 0px 0px 0px)`;
+        page3.style.clipPath = `inset(${
+          ((1 - scrolled) / 0.5) * 100
+        }% 0px 0px 0px)`;
+        page4.style.clipPath = `inset(${
+          ((1.5 - scrolled) / 0.5) * 100
+        }% 0px 0px 0px)`;
+        page5.style.clipPath = `inset(${
+          ((2 - scrolled) / 0.5) * 100
+        }% 0px 0px 0px)`;
+      });
+    </script>
+  </body>
+</html>
